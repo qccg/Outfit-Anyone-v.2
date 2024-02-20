@@ -18,7 +18,7 @@ def onClick(cloth_id, pose_image, pose_id, size, request: gr.Request):
         # res = cv2.imread(res)
         return res, "Done! Use the pre-run results directly, the cloth size does not take effect "
     else:
-        return None, "由于openXLab的demo在访问时无法获取访问者ip用于绑定推理结果，故该空间暂时无法提供推理服务。您可以（1）在huggingface的同名space尝试自己上传图片，或（2）在赛飞相机内操作"
+        return None, "Due to the fact that the demo at openXLab cannot access the visitor's IP address to bind the inference result, this space is temporarily unable to provide inference services. You can try uploading an image on the same space in Hugging Face."
 
         try:
             client_ip = request.client.host
@@ -92,12 +92,12 @@ pose_examples = get_pose_examples()
 
 # Description
 title = r"""
-<h1 align="center">Outfit Anyone in the Wild: Get rid of Annoying Restrictions for Virtual Try-on Task</h1>
+<h1 align="center">Outfit Anyone</h1>
 """
 
 description = r"""
-<b>Official 🤗 Gradio demo</b> for <a href='https://github.com/selfitcamera/Outfit-Anyone-in-the-Wild' target='_blank'><b>Outfit Anyone in the Wild: Get rid of Annoying Restrictions for Virtual Try-on Task</b></a>.<br>
-1. Clothing models are fixed in this demo, but you can create your own in SelfitCamera WeChat applet (for Chainese users).
+<b>Official 🤗 Gradio demo</b> for <a href='https://github.com/qccg/Outfit-Anyone' target='_blank'><b>Outfit Anyone</b></a>.<br>
+1. Clothing models are fixed in this demo.
 2. You can upload your own pose photo, then click the run button and wait for 3~5 minutes to see the results.
 3. After submitting the task, feel free to leave this page. Everytime you refresh this page, completed tasks will be displayed on the history tab (bind with your ip address).
 4. Share your try-on photo with your friends and enjoy! 😊"""
